@@ -1,0 +1,6 @@
+{
+  "name": "R2Cloud - Cloudflare R2 Bucket Manager",
+  "description": "High-performance drag-and-drop file uploader and explorer for Cloudflare R2 storage with individual progress tracking, concurrency controls, and folder hierarchy support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
