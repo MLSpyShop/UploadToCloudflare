@@ -23,14 +23,6 @@ export const FilePreviewModal: React.FC<FilePreviewModalProps> = ({
 
     const fetchPresignedUrl = async () => {
       setLoading(true);
-      if (credentials.isDemo) {
-        setDownloadUrl(`https://demo-r2.cloudflare.com/${object.Key}`);
-        if (object.Key.endsWith('.txt') || object.Key.endsWith('.json') || object.Key.endsWith('.ts') || object.Key.endsWith('.tsx')) {
-          setTextContent(`// Demo content for ${object.Key}\nconsole.log("Hello from Cloudflare R2 demo!");`);
-        }
-        setLoading(false);
-        return;
-      }
 
       try {
         const res = await fetch('/api/r2/presign-download', {
